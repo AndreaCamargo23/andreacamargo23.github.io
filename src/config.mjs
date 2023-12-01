@@ -4,7 +4,6 @@ const CONFIG = {
   name: 'Ingeniería económica 302',
 
   origin: 'https://andreacamargo23.github.io',
-  basePathname: '',
   trailingSlash: false,
 
   title: 'Ingeniería Económica: Proyecto Final',
