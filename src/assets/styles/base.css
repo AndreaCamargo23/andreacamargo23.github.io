@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .text-page {
+    color: var(--aw-color-text-page);
+  }
+
+  .text-muted {
+    color: var(--aw-color-text-muted);
+  }
+
+  .bg-light {
+    background-color: var(--aw-color-bg-page);
+  }
+
+  .bg-dark {
+    @apply bg-stone-900;
+  }
+
+}
+
+#header.scroll {
+  @apply shadow-md md:shadow-lg text-white md:bg-gray-700/90 md:backdrop-blur-sm dark:bg-gray-700 dark:md:bg-stone-700;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+[astro-icon].icon-light > * {
+  stroke-width: 1.2;
+}
+
+[astro-icon].icon-bold > * {
+  stroke-width: 2.4;
+}
+
+[data-aw-toggle-menu] path {
+  @apply transition;
+}
+[data-aw-toggle-menu].expanded g > path:first-child {
+  @apply -rotate-45 translate-y-[15px] translate-x-[-3px];
+}
+
+[data-aw-toggle-menu].expanded g > path:last-child {
+  @apply rotate-45 translate-y-[-8px] translate-x-[14px];
+}

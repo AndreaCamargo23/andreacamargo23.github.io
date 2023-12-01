@@ -1,0 +1,31 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+
+import Landing from '~/components/widgets/Landing.astro';
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+<!--  image={{ src: import('~/assets/images/logo_ud.png'), alt: 'Universidad distrital Logo' }} -->
+<Layout {meta}>
+  <!-- Hero Widget ******************* -->
+
+  <Landing
+  >
+    <Fragment slot="title">
+      Ingeniería económica: <span class="hidden lg:inline"> Proyecto Final <br class="2xl:hidden"/></span>
+      <span class="text-accent dark:text-white highlight"></span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold"></span></span
+      >
+      Herramienta para calcular amortizaciones, capitalizaciones y conversiones de tasas de interes.
+    </Fragment>
+  </Landing>
+</Layout>
